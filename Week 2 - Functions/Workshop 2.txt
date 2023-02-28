@@ -1,0 +1,66 @@
+// 1. Write a void function which finds and prints the midpoint coordinates of a line. The
+function should take in four parameters (x1, y1, x2 and y2).
+xmid=(x1+x2)/2, ymid=(y1+y2)/2
+
+#include <stdio.h>
+ 
+void midpoint(float x1, float x2, float y1, float y2){
+    float xmid=(x1+x2)/2;
+    float ymid=(y1+y2)/2;
+  
+    printf("\n%f %f ",xmid, ymid);
+}
+int main()
+{
+    float x1, x2, y1, y2;
+    printf("Enter value for x1, x2, y1, y2: \n");
+    scanf("%f %f %f %f",&x1, &x2, &y1, &y2);
+    
+    midpoint(x1, x2, y1, y2); //calling the function
+    return 0;
+}
+
+
+// 2. Write a function that takes two integers as arguments and return the greatest among them.
+
+#include<stdio.h>
+int num(int a, int b){
+    if(a>b){
+    printf("\n %d is the greater number",a);
+    }
+    else{
+    printf("\n %d is the greatest number",b);
+    }
+}
+int main ()
+{
+    int a, b;
+    printf("Enter first number: ");
+    scanf("%d", &a);
+    printf("Enter second number: ");
+    scanf("%d", &b);
+    num(a,b);//argument or acutal parameter
+    return 0;
+}
+
+// 3. Write a void function which takes one integer (n) as a parameter. Your function should
+then print out all triangular numbers from 1 up to the nth term.
+
+#include <stdio.h>
+void triangularSeries(int n)
+{
+    int i, j = 1, k = 1;
+    for (i = 1; i <= n; i++) {
+        printf(" %d ", k);
+        j = j + 1;
+        k = k + j;
+    }
+}
+int main()
+{
+    int n;
+    printf("Enter a number: ");
+    scanf("%d",&n);
+    triangularSeries(n);
+    return 0;
+}
