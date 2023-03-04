@@ -1,3 +1,5 @@
+// 1. Write a C program to find cube of a number using function.
+
 #include <stdio.h>
 
 void cubeNum(){
